@@ -1,6 +1,21 @@
 .btn_me {
   padding: 0.25rem 1.5rem;
 }
+.btn_empty_light{
+    border: 2px solid $text-light;
+    color: $text-light;
+}
+.btn_empty_primary{
+    border: 2px solid $primary-color;
+    color: $primary-color;    
+}
+
+.btn_empty_light,
+.btn_empty_primary{
+    font-size: 12px;
+    padding: 0.5rem 1.5rem;
+}
+
 .bg_gold {
   background-color: $primary-color;
 }
