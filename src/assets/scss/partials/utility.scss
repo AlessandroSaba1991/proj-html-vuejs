@@ -1,4 +1,5 @@
-.btn_me {
+/* Button */
+.btn_nav {
   padding: 0.25rem 1.5rem;
 }
 .btn_empty_light{
@@ -9,16 +10,25 @@
     border: 2px solid $primary-color;
     color: $primary-color;    
 }
-
-.btn_empty_light,
-.btn_empty_primary{
+.btn_me{
     font-size: 12px;
     padding: 0.5rem 1.5rem;
 }
 
+.btn_full_primary{
+    background-color: $primary-color;
+    color: $text-light;
+}
+/* Background */
 .bg_gold {
   background-color: $primary-color;
 }
 .bg_pink {
   background-color: $secondary-color;
+}
+/* Line */
+.gold_line{
+    height: 3px;
+    width: 145px;
+    background-color: $primary-color;
 }

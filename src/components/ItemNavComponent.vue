@@ -1,7 +1,7 @@
 <template>
   <li
     class="text-uppercase"
-    :class="item.text === 'donate' ? 'btn_me bg_gold' : ''">
+    :class="item.text === 'donate' ? 'btn_nav bg_gold' : ''">
     <a :href="item.id">{{ item.text }}</a>
   </li>
 </template>
