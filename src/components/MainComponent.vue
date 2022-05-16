@@ -31,4 +31,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (min-width: 2000px){
+  .title_me {
+      h2 {
+        font-size: 38px;
+        color: $text-dark;
+      }
+      p {
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 0;
+        margin-bottom: 4rem;
+        color: $text-light-dark;
+      }
+    }
+}
 </style>

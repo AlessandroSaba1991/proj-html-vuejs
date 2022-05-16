@@ -24,5 +24,16 @@ export default {
   color: $primary-color;
   border-radius: 50%;
   padding: 0.5rem;
+  transition: all 500ms;
+}
+.social:hover{
+  transform: scale(1.3);
+}
+@media screen and (min-width: 2000px) {
+  .social {
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+  }
 }
 </style>

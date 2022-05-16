@@ -1,5 +1,5 @@
 <template>
-  <section class="mission">
+  <section id="2" class="mission">
     <div class="container-fluid">
       <div class="row">
         <div class="col-8">
@@ -15,14 +15,13 @@
               Debitis reiciendis officiis inventore repudiandae, vel
               repellendus, laudantium commodi! Lorem, ipsum dolor sit amet
               consectetur adipisicing elit. In reiciendis quae, illo distinctio
-              veniam sunt, quia, a perferendis excepturi ad distinctio veniam
-              sunt.
+              veniam sunt, quia, a perferendis excepturi sunt.
             </p>
             <p>
               Adipisci porro nemo ipsa non harum maxime enim ducimus!inventore
               repudiandae, vel repellendus, laudantium modi!
             </p>
-            <div class="button text-uppercase mt-4">
+            <div class="button text-uppercase">
               <a class="btn_me btn_full_primary" href="#">our mission</a>
             </div>
           </div>
@@ -72,6 +71,7 @@ export default {
   }
   .button {
     color: $text-light;
+    margin-top: 1.5rem;
   }
 }
 .col-4 {
@@ -95,6 +95,44 @@ export default {
     }
     p:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+@media screen and (min-width: 2000px) {
+  .mission_text {
+    padding-top: 10rem;
+    padding-bottom: 11rem;
+    h2 {
+      margin-top: 12px;
+      margin-bottom: 1.5rem !important;
+      font-size: 42px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 45px;
+    }
+    .button {
+      margin-top: 3.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .col-4 {
+    .mission_data {
+      padding-top: 10rem;
+      padding-bottom: 11rem;
+      h2 {
+        font-size: 46px;
+        span {
+          font-size: 58px;
+        }
+      }
+      p {
+        font-size: 23px;
+        margin-bottom: 5.5rem;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <section class="causes">
+  <section id="3" class="causes">
     <div class="container">
       <div class="title_me">
         <h2 class="text-uppercase mb-3">Recent Causes</h2>
@@ -95,7 +95,29 @@ export default {
     a {
       color: $text-light;
       font-size: 14px;
+      transition: all 500ms;
+    }
+    a:hover{
+      color: $primary-color;
     }
   }
+}
+@media screen and (min-width: 2000px){
+  .causes {
+  padding-top: 10rem;
+  .container {
+    max-width: 82%;
+    .title_me{
+      margin-bottom: 3rem;
+    }
+  }
+  .link_causes {
+    margin-top: 10rem;
+    padding: 4rem 0;
+    a {
+      font-size: 20px;
+    }
+  }
+}
 }
 </style>

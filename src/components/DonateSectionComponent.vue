@@ -1,5 +1,5 @@
 <template>
-  <section class="donate">
+  <section id="5" class="donate">
       <div class="title_me">
         <h2 class="text-uppercase mb-3">change a life today</h2>
         <div class="gold_line mb-4"></div>
@@ -8,7 +8,7 @@
         take much to change a life, Get in tousch today and start making the difference</p>
       </div>
       <div class="button text-uppercase mb-5">
-        <a href="#" class="btn_me btn_empty_light me-3">volunteer</a>
+        <a href="#" class="btn_me btn_empty_light">volunteer</a>
         <a href="#" class="btn_me btn_empty_light">donate now</a>
       </div>
     </section>
@@ -42,5 +42,21 @@ export default {
       margin-bottom: 2.5rem;
     }
   }
+  a:first-child{
+    margin-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 2000px){
+  .donate {
+  padding: 12rem 0;
+  .title_me {
+    p {         
+      margin-bottom: 4rem !important;
+    }
+  }
+  a:first-child{
+    margin-right: 4rem;
+  }
+}
 }
 </style>

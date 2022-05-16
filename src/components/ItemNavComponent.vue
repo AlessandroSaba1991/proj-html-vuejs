@@ -1,8 +1,8 @@
 <template>
   <li
     class="text-uppercase"
-    :class="item.text === 'donate' ? 'btn_nav bg_gold' : ''">
-    <a :href="item.id">{{ item.text }}</a>
+    :class="item.text === 'donate' ? 'btn_me btn_full_primary' : ''">
+    <a :href="'#'+item.id">{{ item.text }}</a>
   </li>
 </template>
 
@@ -17,14 +17,20 @@ export default {
 
 <style lang="scss" scoped>
 li:last-child a:hover {
-  color: $text-light;
+  color: $primary-color;
 }
 a {
   font-weight: 400;
   font-size: 12px;
   color: $text-light;
+  transition: all 500ms;
   &:hover {
     color: $primary-color;
+  }
+}
+@media screen and (min-width: 2000px){
+  a{
+    font-size: 22px;
   }
 }
 </style>

@@ -1,32 +1,32 @@
 <template>
   <div class="footer_bottom">
-      <div class="copyright">
-        <p>
-          &copy; Copyright 2012 - <span> </span>2020 AVADA THEME BY THEME FUSION
-          &nbsp;&nbsp;|&nbsp;&nbsp; ALL RIGHT RESERVED &nbsp;&nbsp;|&nbsp;&nbsp;
-          POWERED BY WORDPRESS
-        </p>
-      </div>
-      <div class="social_icons">
-          <Social :social="social" v-for="social in socialList" :key="social.id" />
-      </div>
-      <div class="page_up">
-        <a href="#" 
-          ><font-awesome-icon icon="fa-solid fa-chevron-up" size="xs"
-        /></a>
-      </div>
+    <div class="copyright">
+      <p>
+        &copy; Copyright 2012 - <span> </span>2020 AVADA THEME BY THEME FUSION
+        &nbsp;&nbsp;|&nbsp;&nbsp; ALL RIGHT RESERVED &nbsp;&nbsp;|&nbsp;&nbsp;
+        POWERED BY WORDPRESS
+      </p>
     </div>
+    <div class="social_icons">
+      <Social :social="social" v-for="social in socialList" :key="social.id" />
+    </div>
+    <div class="page_up">
+      <a href="#">
+        <font-awesome-icon icon="fa-solid fa-chevron-up" />
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
-import Social from './SocialFooterComponent.vue'
+import Social from "./SocialFooterComponent.vue";
 
 export default {
-    name:'BottomFooterComponent',
-    components:{
-        Social
-    },
-    data() {
+  name: "BottomFooterComponent",
+  components: {
+    Social,
+  },
+  data() {
     return {
       socialList: [
         {
@@ -48,7 +48,7 @@ export default {
       ],
     };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -74,13 +74,34 @@ export default {
     right: 4%;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     background-color: #464646;
-    a{
-        padding-top: 0.25rem;
-        color: $text-light;
+    a {
+      font-size: 12px;
+      padding-top: 0.25rem;
+      color: $text-light;
+    }
+  }
+}
+@media screen and (min-width: 2000px) {
+  .footer_bottom {
+    padding: 1.5rem 0;
+    .copyright {
+      font-size: 13px;
+      letter-spacing: 0.3px;
+    }
+    .social_icons {
+      column-gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .page_up {
+      width: 65px;
+      a {
+        font-size: 20px;
+        padding-top: 0.5rem;
+      }
     }
   }
 }

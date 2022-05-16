@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section id="1" class="hero">
     <div class="hero_text text-center">
       <h1 class="text-uppercase">make a difference</h1>
       <p>
@@ -41,6 +41,22 @@ export default {
     }
     .button {
       margin-top: 2rem;
+    }
+  }
+}
+@media screen and (min-width: 2000px) {
+  .hero {
+    height: 100vh;
+    .hero_text {
+      h1 {
+        font-size: 80px;
+      }
+      p {
+        font-size: 26px;
+      }
+      .button {
+        margin-top: 4rem;
+      }
     }
   }
 }

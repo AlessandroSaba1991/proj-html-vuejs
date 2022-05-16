@@ -1,7 +1,6 @@
 <template>
   <div class="logo">
         <img
-          width="250"
           src="@/assets/img/avada-charity-logo.png"
           alt="logo charity"
         />
@@ -14,6 +13,13 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+img{
+  width: 250px;
+}
+@media screen and (min-width: 2000px){
+  img{
+  width: 370px;
+}
+}
 </style>

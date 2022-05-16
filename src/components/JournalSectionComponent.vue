@@ -1,5 +1,5 @@
 <template>
-  <section class="journal">
+  <section id="4" class="journal">
     <div class="container">
       <div class="title_me">
         <h2 class="text-uppercase mb-3">latest articles</h2>
@@ -9,33 +9,14 @@
       <div class="row">
         <div class="col-6">
           <div class="card_article">
-            <picture>
-              <source
-                srcset="@/assets/img/photo-1444213007800-cff19e1677ac.jpg"
-                media="(min-width: 1400px)"
-              />
-              <source
-                srcset="
-                  @/assets/img/photo-1444213007800-cff19e1677ac-600x450.jpg
-                "
-                media="(min-width: 992px)"
-              />
-              <source
-                srcset="
-                  @/assets/img/photo-1444213007800-cff19e1677ac-400x300.jpg
-                "
-                media="(min-width: 768px)"
-              />
-              <img
-                src="@/assets/img/photo-1444213007800-cff19e1677ac-200x150.jpg"
-                alt="man with tiger"
-              />
-            </picture>
+            <img
+              :src="img_active.img"
+              :alt="img_active.title"
+            />
             <div class="text_article">
-              <h6>Understanding community complexities</h6>
+              <h6>{{img_active.title}}</h6>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Prasent ac nibh vestibulum, laoreet ipsum.
+                {{img_active.text}}
               </p>
             </div>
           </div>
@@ -43,9 +24,9 @@
         <div class="col-6">
           <div class="row h-100 align-content-between">
             <ImgJournal
-              :slider="slider"
-              v-for="slider in sliderList"
-              :key="slider.id"
+              :slider="slider" :index="index"
+              v-for="(slider,index) in sliderList"
+              :key="slider.id" @changeImage="changeImage(slider,index)"
             />
           </div>
         </div>
@@ -62,15 +43,21 @@
 </template>
 
 <script>
-import ImgJournal from './ImgJournalComponent.vue'
+import ImgJournal from "./ImgJournalComponent.vue";
 
 export default {
   name: "JournalSectionComponent",
-  components:{
-      ImgJournal
+  components: {
+    ImgJournal,
   },
   data() {
     return {
+      img_active: {
+        id:0,
+        img: require("@/assets/img/photo-1444213007800-cff19e1677ac.jpg"),
+        title: "Understanding community complexities",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Prasent ac nibh vestibulum, laoreet ipsum.",
+      },
       sliderList: [
         {
           id: 1,
@@ -99,6 +86,13 @@ export default {
       ],
     };
   },
+  methods:{
+    changeImage(object,index){
+      this.sliderList.splice(index,1)
+      this.sliderList.push(this.img_active)
+      this.img_active = object
+    }
+  }
 };
 </script>
 
@@ -126,7 +120,7 @@ export default {
       }
     }
     .card_article {
-      border: 1px solid #EBEAEA;
+      border: 1px solid #ebeaea;
       .text_article {
         padding: 1rem;
         h6 {
@@ -147,7 +141,46 @@ export default {
     .button {
       margin-top: 4rem;
       text-align: center;
+      a{
+        transition: all 500ms;
+      }
+      a:hover{
+        color: $primary-color;
+      }
     }
   }
+  img{
+    width: 100%;
+    aspect-ratio: 2 / 1.5;
+  }
+}
+@media screen and (min-width: 2000px){
+  .journal {
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  .container {
+    max-width: 58%;
+    .title_me{
+      margin-bottom: 3rem;
+    }
+    .card_article {
+      border: 1px solid #ebeaea;
+      .text_article {
+        padding: 1.75rem;
+        h6 {
+          font-size: 25px;
+          margin-top: 1.25rem;
+        }
+        p {
+          font-size: 18px;          
+          line-height: 38px;          
+        }
+      }
+    }
+    .button {
+      margin-top: 8rem;     
+    }
+  }  
+}
 }
 </style>

@@ -1,20 +1,20 @@
 <template>
   <nav>
-        <ul>
-          <ItemNav :item="item" v-for="item in navList" :key="item.id" />
-        </ul>
-      </nav>
+    <ul>
+      <ItemNav :item="item" v-for="item in navList" :key="item.id" />
+    </ul>
+  </nav>
 </template>
 
 <script>
-import ItemNav from './ItemNavComponent.vue'
+import ItemNav from "./ItemNavComponent.vue";
 
 export default {
-    name:'NavComponent',
-    components:{
-        ItemNav
-    },
-    data() {
+  name: "NavComponent",
+  components: {
+    ItemNav,
+  },
+  data() {
     return {
       navList: [
         {
@@ -40,7 +40,7 @@ export default {
       ],
     };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -49,5 +49,10 @@ ul {
   align-items: center;
   column-gap: 2.5rem;
   margin-bottom: 0;
+}
+@media screen and (min-width: 2000px) {
+  ul {
+    column-gap: 5.5rem;
+  }
 }
 </style>
