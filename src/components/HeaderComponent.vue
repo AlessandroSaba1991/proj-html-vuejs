@@ -1,20 +1,20 @@
 <template>
   <header>
     <div class="container">
-     <Logo />
+     <LogoHeader />
       <Nav />
     </div>
   </header>
 </template>
 
 <script>
-import Logo from './LogoComponent.vue'
+import LogoHeader from './LogoHeaderComponent.vue'
 import Nav from './NavComponent.vue'
 
 export default {
   name: "HeaderComponent",
   components:{
-      Logo,
+      LogoHeader,
       Nav
   },
 };

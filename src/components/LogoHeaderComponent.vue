@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    name:'LogoComponent'
+    name:'LogoHeaderComponent'
 }
 </script>
 

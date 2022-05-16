@@ -5,6 +5,7 @@
     <ValuesSection />
     <CausesSection />
     <JournalSection />
+    <DonateSection />
   </main>
 </template>
 
@@ -13,7 +14,8 @@ import HeroSection from "./HeroSectionComponent.vue";
 import MissionSection from "./MissionSectionComponent.vue";
 import ValuesSection from "./ValuesSectionComponent.vue";
 import CausesSection from "./CausesSectionComponent.vue";
-import JournalSection from './JournalSectionComponent.vue'
+import JournalSection from "./JournalSectionComponent.vue";
+import DonateSection from './DonateSectionComponent.vue'
 
 export default {
   name: "MainComponent",
@@ -22,11 +24,11 @@ export default {
     MissionSection,
     ValuesSection,
     CausesSection,
-    JournalSection
+    JournalSection,
+    DonateSection
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
 </style>

@@ -119,14 +119,14 @@ export default {
         font-size: 26px;
       }
       p {
-        color: $text-dark;
+        color: $text-light-dark;
         font-family: "Raleway", sans-serif;
         letter-spacing: 0;
         margin-bottom: 4rem;
       }
     }
     .card_article {
-      border: 1px solid $text-light-dark;
+      border: 1px solid #EBEAEA;
       .text_article {
         padding: 1rem;
         h6 {
@@ -139,7 +139,7 @@ export default {
           font-size: 11px;
           letter-spacing: 0;
           line-height: 25px;
-          color: $text-dark;
+          color: $text-light-dark;
           margin-bottom: 0;
         }
       }

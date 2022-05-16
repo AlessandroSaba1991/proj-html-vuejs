@@ -44,7 +44,7 @@ export default {
             font-size: 11px;
             letter-spacing: 0;
             line-height: 25px;
-            color: $text-dark;
+            color: $text-light-dark;
             margin-bottom: 0;
           }
         }
