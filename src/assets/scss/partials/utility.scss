@@ -1,60 +1,68 @@
 /* Button */
-.btn_me{
-    font-size: 12px;
-    padding: 0.5rem 1.5rem;
-    border: 1px solid transparent;
+.btn_me {
+  font-size: 12px;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid transparent;
 }
-.btn_empty_light{
-    border: 2px solid $button-light;
-    color: $button-light;
-    transition: all 500ms;
+.btn_empty_light {
+  border: 2px solid $button-light;
+  color: $button-light;
+  transition: all 500ms;
 }
-.btn_empty_primary{
-    border: 2px solid $primary-color;
-    color: $primary-color; 
-    transition: all 500ms;   
+.btn_empty_primary {
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  transition: all 500ms;
 }
 .btn_empty_primary:hover,
-.btn_empty_light:hover{
-  border-color:$secondary-color;
+.btn_empty_light:hover {
+  border-color: $secondary-color;
   color: $secondary-color;
 }
-.btn_full_primary{
-    background-color: $primary-color;
-    color: $text-light;
-    border-color: $primary-color;
-    transition: all 500ms;
+.btn_full_primary {
+  background-color: $primary-color;
+  color: $text-light;
+  border-color: $primary-color;
+  transition: all 500ms;
 }
-.btn_full_primary:hover{
-  background-color:$text-light;
+.btn_full_primary:hover {
+  background-color: $text-light;
   color: $primary-color;
 }
-.btn_full_secondary{
+.btn_full_secondary {
   background-color: $secondary-color;
   color: $text-light;
 }
-.bg_secondary{
-  background-color: #ed69647e;
+/* Background */
+.bg_secondary {
+  background-image: linear-gradient($secondary-color, transparent);
 }
-.bg_trasparent{
-  background-color: transparent;
+.bg_trasparent {
+  background-image: linear-gradient($primary-color, transparent);
 }
 /* Line */
-.gold_line{
-    height: 3px;
-    width: 145px;
-    background-color: $primary-color;
+.gold_line {
+  height: 3px;
+  width: 145px;
+  background-color: $primary-color;
+  transition: all 500ms;
 }
-@media screen and (min-width: 2000px){
+.gold_line:hover {
+  width: 300px;
+}
+@media screen and (min-width: 2000px) {
   .btn_nav {
     padding: 0.5rem 2rem;
   }
-  .btn_me{
+  .btn_me {
     font-size: 20px;
     padding: 0.75rem 2rem;
-}
-.gold_line{
-  width: 232px;
-  margin-bottom: 2.5rem !important;
-}
+  }
+  .gold_line {
+    width: 232px;
+    margin-bottom: 2.5rem !important;
+  }
+  .gold_line:hover {
+    width: 500px;
+  }
 }

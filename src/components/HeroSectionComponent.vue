@@ -7,8 +7,8 @@
         rest
       </p>
       <div class="button text-uppercase">
-        <a href="#" class="btn_me btn_empty_light me-3">our mission</a>
-        <a href="#" class="btn_me btn_empty_primary">donate now</a>
+        <a href="#2" class="btn_me btn_empty_light me-3">our mission</a>
+        <a href="#5" class="btn_me btn_empty_primary">donate now</a>
       </div>
     </div>
   </section>

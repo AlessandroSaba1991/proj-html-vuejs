@@ -1,3 +1,44 @@
 @import '~/node_modules/bootstrap/scss/bootstrap.scss';
 @import '@/assets/scss/partials/common';
 @import '@/assets/scss/partials/utility';
+
+.splash {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("@/assets/img/fss-demo-main.jpg");
+    animation: bounce-in 4s ease;
+  
+    @keyframes bounce-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      25% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      35% {
+        transform: scale(0.9);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+  }
+  @media screen and (min-width: 2000px) {
+    .title_me {
+      h2 {
+        font-size: 42px !important;
+        margin-bottom: 1.5rem !important;
+      }
+      p {
+        font-size: 24px !important;
+        margin-bottom: 6rem !important;
+      }
+    }
+  }

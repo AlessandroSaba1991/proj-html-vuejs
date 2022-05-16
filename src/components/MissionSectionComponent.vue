@@ -22,7 +22,7 @@
               repudiandae, vel repellendus, laudantium modi!
             </p>
             <div class="button text-uppercase">
-              <a class="btn_me btn_full_primary" href="#">our mission</a>
+              <a class="btn_me btn_full_primary" href="#2">our mission</a>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@
             <h2>
               <font-awesome-icon icon="fa-solid fa-globe" /> <span>132</span>
             </h2>
-            <p>Active project</p>
+            <p>Active projects</p>
             <h2>
               <font-awesome-icon icon="fa-solid fa-dollar-sign" />
               <span>3.8M</span>
@@ -86,6 +86,10 @@ export default {
     color: $text-light;
     h2 {
       margin-bottom: 0;
+      &:hover {
+        backface-visibility: visible !important;
+        animation: flip 2s ease;
+      }
       span {
         font-size: 40px;
       }
@@ -98,6 +102,30 @@ export default {
     }
   }
 }
+
+@keyframes flip {
+  0% {
+    transform: perspective(400px) rotateY(0);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translateZ(150px) rotateY(170deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) rotateY(360deg) scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: perspective(400px) scale(1);
+    animation-timing-function: ease-in;
+  }
+}
+
 @media screen and (min-width: 2000px) {
   .mission_text {
     padding-top: 10rem;

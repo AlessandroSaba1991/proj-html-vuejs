@@ -34,7 +34,7 @@
       <div class="button">
         <a
           class="btn_me btn_full_secondary text-uppercase d-inline-block w-100"
-          href="#"
+          href="#4"
           >view all our articles</a
         >
       </div>

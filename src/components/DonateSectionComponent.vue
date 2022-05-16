@@ -8,8 +8,8 @@
         take much to change a life, Get in tousch today and start making the difference</p>
       </div>
       <div class="button text-uppercase mb-5">
-        <a href="#" class="btn_me btn_empty_light">volunteer</a>
-        <a href="#" class="btn_me btn_empty_light">donate now</a>
+        <a href="#5" class="btn_me btn_empty_light">volunteer</a>
+        <a href="#5" class="btn_me btn_empty_light">donate now</a>
       </div>
     </section>
 </template>

@@ -94,6 +94,7 @@ export default {
     }
     .social_icons {
       column-gap: 1rem;
+      margin-top: 2rem;
       margin-bottom: 0.5rem;
     }
     .page_up {

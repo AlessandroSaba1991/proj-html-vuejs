@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="link_causes">
-      <a class="text-uppercase" href="#">view all our causes</a>
+      <a class="text-uppercase" href="#3">view all our causes</a>
     </div>
   </section>
 </template>
@@ -67,6 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 .causes {
+  position: relative;
   padding-top: 5rem;
   text-align: center;
   .container {

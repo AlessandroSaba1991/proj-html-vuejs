@@ -51,6 +51,7 @@ header {
   width: 100%;
   padding: 1.5rem 0;
   position: fixed;
+  z-index: 2;
 }
 .container {
   display: flex;

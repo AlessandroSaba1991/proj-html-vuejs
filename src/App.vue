@@ -1,8 +1,11 @@
 <template>
   <div id="app">
+    <div class="splash" v-if="!loading"></div>
+    <div class="wrapper" v-if="loading">
     <Header />
     <Main />
     <Footer />
+    </div>
   </div>
 </template>
 
@@ -18,21 +21,22 @@ export default {
     Main,
     Footer,
   },
+  data(){
+    return{
+      loading:false
+    }
+  },
+  methods:{
+    splash(){
+      setTimeout(()=> this.loading = true,3500)
+    }
+  },
+  mounted(){
+    this.splash()
+  }
 };
 </script>
 
 <style lang="scss">
 @import "@/assets/scss/style";
-@media screen and (min-width: 2000px){
-  .title_me {
-      h2 {
-        font-size: 42px !important;
-        margin-bottom: 1.5rem !important;
-      }
-      p {
-        font-size: 24px !important;
-        margin-bottom: 6rem !important;        
-      }
-    }
-}
 </style>
