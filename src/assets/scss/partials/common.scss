@@ -8,6 +8,9 @@ ul {
 a {
   text-decoration: none;
 }
+a:hover {
+  color:currentColor
+}
 img{
   max-width: 100%;
   max-height: 100%;
