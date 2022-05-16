@@ -6,7 +6,9 @@
       </div>
       <h6 class="mb-3">{{ value.title }}</h6>
       <p>{{ value.text }}</p>
-      <div class="button text-uppercase mt-4" @click="dropdown_menu === false ? dropdown_menu = true : dropdown_menu = false">
+      <div
+        class="button text-uppercase mt-4"
+        @click="dropdown_menu === false ? dropdown_menu = true : dropdown_menu = false">
         <a class="btn_me btn_full_primary">Learn More</a>
       </div>
       <div class="dropdown_menu" v-if="dropdown_menu">
@@ -14,8 +16,7 @@
           <div class="icon_mark" @click="dropdown_menu = false">
             <font-awesome-icon
               icon="fa-solid fa-xmark"
-              @click="dropdown_menu = false"
-            />
+              @click="dropdown_menu = false"/>
           </div>
           <h6>{{ value.title }}</h6>
           <p>
@@ -80,7 +81,7 @@ export default {
     text-align: center;
     background-color: rgb(187 160 86 / 93%);
     border-radius: 0.25rem;
-    box-shadow: 0 0 10px #fcd66c;
+    box-shadow: 0 0 10px $primary-color;
     animation: entry 1s ease-in-out;
     .text_dropdown {
       position: relative;
@@ -103,27 +104,26 @@ export default {
 }
 
 @keyframes entry {
-  0%{
+  0% {
     top: 0;
     left: 0;
     opacity: 0.3;
   }
-  40%{
+  40% {
     top: -70%;
     left: 0;
     opacity: 0.6;
   }
-  80%{
+  80% {
     top: -20%;
     left: 0;
     opacity: 0.9;
   }
-  100%{
+  100% {
     top: -30%;
     left: 0;
     opacity: 1;
   }
-  
 }
 
 @media screen and (min-width: 2000px) {

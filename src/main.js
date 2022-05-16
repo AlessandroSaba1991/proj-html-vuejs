@@ -9,7 +9,6 @@ import "@fontsource/montserrat/500.css";
 import "@fontsource/raleway";
 import "@fontsource/raleway/100.css";
 import "@fontsource/raleway/200.css";
-
 import "@fontsource/raleway/400.css";
 /* FontAwesome */
 import { library } from "@fortawesome/fontawesome-svg-core";

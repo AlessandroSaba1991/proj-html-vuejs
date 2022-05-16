@@ -85,12 +85,12 @@ export default {
     }
   }
 }
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 2000px) {
   .values {
-  padding: 10rem 0;
-  .container {
-    max-width: 82%;
+    padding: 10rem 0;
+    .container {
+      max-width: 82%;
+    }
   }
-}
 }
 </style>

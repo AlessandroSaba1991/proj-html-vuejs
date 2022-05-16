@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import TopFooter from './TopFooterComponent.vue'
-import BottomFooter from './BottomFooterComponent.vue'
+import TopFooter from "./TopFooterComponent.vue";
+import BottomFooter from "./BottomFooterComponent.vue";
 
 export default {
   name: "FooterComponent",
-  components:{
-      TopFooter,
-      BottomFooter
+  components: {
+    TopFooter,
+    BottomFooter,
   },
 };
 </script>

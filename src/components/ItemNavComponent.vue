@@ -16,9 +16,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-li:last-child a:hover {
-  color: $primary-color;
-}
 a {
   font-weight: 400;
   font-size: 12px;

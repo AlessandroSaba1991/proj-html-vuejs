@@ -7,7 +7,11 @@
         <p>We run projects in over 30 countries in 5 continents</p>
       </div>
       <div class="row row-cols-4 gx-4">
-        <ImgCauses :imgCauses="imgCauses" v-for="imgCauses in imgCausesList" :key="imgCauses.id" />
+        <ImgCauses
+          :imgCauses="imgCauses"
+          v-for="imgCauses in imgCausesList"
+          :key="imgCauses.id"
+        />
       </div>
     </div>
     <div class="link_causes">
@@ -98,27 +102,27 @@ export default {
       font-size: 14px;
       transition: all 500ms;
     }
-    a:hover{
+    a:hover {
       color: $primary-color;
     }
   }
 }
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 2000px) {
   .causes {
-  padding-top: 10rem;
-  .container {
-    max-width: 82%;
-    .title_me{
-      margin-bottom: 3rem;
+    padding-top: 10rem;
+    .container {
+      max-width: 82%;
+      .title_me {
+        margin-bottom: 3rem;
+      }
+    }
+    .link_causes {
+      margin-top: 10rem;
+      padding: 4rem 0;
+      a {
+        font-size: 20px;
+      }
     }
   }
-  .link_causes {
-    margin-top: 10rem;
-    padding: 4rem 0;
-    a {
-      font-size: 20px;
-    }
-  }
-}
 }
 </style>

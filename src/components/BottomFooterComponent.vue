@@ -79,6 +79,7 @@ export default {
     border-top-right-radius: 0.25rem;
     background-color: #464646;
     a {
+      width: 100%;
       font-size: 12px;
       padding-top: 0.25rem;
       color: $text-light;

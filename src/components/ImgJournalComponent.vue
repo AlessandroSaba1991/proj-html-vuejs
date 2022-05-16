@@ -6,9 +6,7 @@
       </div>
       <div class="text_slider">
         <h6>{{ slider.title }}</h6>
-        <p>
-          {{ slider.text }}
-        </p>
+        <p>{{ slider.text }}</p>
       </div>
     </div>
   </div>
@@ -31,7 +29,7 @@ export default {
     display: flex;
     .img {
       width: 25%;
-      img{
+      img {
         width: 100%;
         aspect-ratio: 1 / 0.8;
       }
@@ -59,22 +57,23 @@ export default {
     }
   }
 }
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 2000px) {
   .col-12 {
-  .card_slider {
-    .text_slider {
-      width: 75%;
-      padding-left: 1rem;
-      h6 {
-        font-size: 25px;
-        margin: 0.5rem 0;
-      }
-      p {
-        font-size: 18px;
-        letter-spacing: 0;
-        line-height: 38px;
+    .card_slider {
+      .text_slider {
+        width: 75%;
+        padding-left: 1rem;
+        h6 {
+          font-size: 25px;
+          margin: 0.5rem 0;
+        }
+        p {
+          font-size: 18px;
+          letter-spacing: 0;
+          line-height: 38px;
+        }
       }
     }
   }
-}}
+}
 </style>

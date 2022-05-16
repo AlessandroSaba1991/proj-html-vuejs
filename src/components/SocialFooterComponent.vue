@@ -26,7 +26,7 @@ export default {
   padding: 0.5rem;
   transition: all 500ms;
 }
-.social:hover{
+.social:hover {
   transform: scale(1.3);
 }
 @media screen and (min-width: 2000px) {

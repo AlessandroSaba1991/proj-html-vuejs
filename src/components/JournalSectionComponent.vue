@@ -9,34 +9,29 @@
       <div class="row">
         <div class="col-6">
           <div class="card_article">
-            <img
-              :src="img_active.img"
-              :alt="img_active.title"
-            />
+            <img :src="img_active.img" :alt="img_active.title" />
             <div class="text_article">
-              <h6>{{img_active.title}}</h6>
-              <p>
-                {{img_active.text}}
-              </p>
+              <h6>{{ img_active.title }}</h6>
+              <p>{{ img_active.text }}</p>
             </div>
           </div>
         </div>
         <div class="col-6">
           <div class="row h-100 align-content-between">
             <ImgJournal
-              :slider="slider" :index="index"
-              v-for="(slider,index) in sliderList"
-              :key="slider.id" @changeImage="changeImage(slider,index)"
+              :slider="slider"
+              :index="index"
+              v-for="(slider, index) in sliderList"
+              :key="slider.id"
+              @changeImage="changeImage(slider, index)"
             />
           </div>
         </div>
       </div>
       <div class="button">
-        <a
-          class="btn_me btn_full_secondary text-uppercase d-inline-block w-100"
-          href="#4"
-          >view all our articles</a
-        >
+        <a class="btn_me btn_full_secondary text-uppercase d-inline-block w-100" href="#4">
+          view all our articles
+        </a>
       </div>
     </div>
   </section>
@@ -53,7 +48,7 @@ export default {
   data() {
     return {
       img_active: {
-        id:0,
+        id: 0,
         img: require("@/assets/img/photo-1444213007800-cff19e1677ac.jpg"),
         title: "Understanding community complexities",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Prasent ac nibh vestibulum, laoreet ipsum.",
@@ -86,13 +81,13 @@ export default {
       ],
     };
   },
-  methods:{
-    changeImage(object,index){
-      this.sliderList.splice(index,1)
-      this.sliderList.push(this.img_active)
-      this.img_active = object
-    }
-  }
+  methods: {
+    changeImage(object, index) {
+      this.sliderList.splice(index, 1);
+      this.sliderList.push(this.img_active);
+      this.img_active = object;
+    },
+  },
 };
 </script>
 
@@ -141,46 +136,46 @@ export default {
     .button {
       margin-top: 4rem;
       text-align: center;
-      a{
+      a {
         transition: all 500ms;
       }
-      a:hover{
+      a:hover {
         color: $primary-color;
       }
     }
   }
-  img{
+  img {
     width: 100%;
     aspect-ratio: 2 / 1.5;
   }
 }
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 2000px) {
   .journal {
-  padding-top: 10rem;
-  padding-bottom: 8rem;
-  .container {
-    max-width: 58%;
-    .title_me{
-      margin-bottom: 3rem;
-    }
-    .card_article {
-      border: 1px solid #ebeaea;
-      .text_article {
-        padding: 1.75rem;
-        h6 {
-          font-size: 25px;
-          margin-top: 1.25rem;
-        }
-        p {
-          font-size: 18px;          
-          line-height: 38px;          
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    .container {
+      max-width: 58%;
+      .title_me {
+        margin-bottom: 3rem;
+      }
+      .card_article {
+        border: 1px solid #ebeaea;
+        .text_article {
+          padding: 1.75rem;
+          h6 {
+            font-size: 25px;
+            margin-top: 1.25rem;
+          }
+          p {
+            font-size: 18px;
+            line-height: 38px;
+          }
         }
       }
+      .button {
+        margin-top: 8rem;
+      }
     }
-    .button {
-      margin-top: 8rem;     
-    }
-  }  
-}
+  }
 }
 </style>

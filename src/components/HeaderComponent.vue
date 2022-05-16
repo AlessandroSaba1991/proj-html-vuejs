@@ -29,11 +29,11 @@ export default {
     bgNav() {
       let class_bg
       if (this.scrollPosition > 5770) {
-        class_bg ='bg_trasparent'
+        class_bg ='bg_primary'
       } else if (this.scrollPosition > 3080) {
         class_bg ='bg_secondary'
       } else if (this.scrollPosition > 2060) {
-        class_bg ='bg_trasparent'
+        class_bg ='bg_primary'
       } else if (this.scrollPosition >  1220) {
         class_bg ='bg_secondary'
       }
