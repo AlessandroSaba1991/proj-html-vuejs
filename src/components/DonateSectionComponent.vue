@@ -11,7 +11,7 @@
       </p>
     </div>
     <div class="button text-uppercase mb-5">
-      <a href="#5" class="btn_me btn_empty_light">volunteer</a>
+      <a href="#6" class="btn_me btn_empty_light" @click="$emit('changeShowForm')">volunteer</a>
       <a href="#5" class="btn_me btn_empty_light">donate now</a>
     </div>
   </section>

@@ -1,6 +1,6 @@
 <template>
   <div class="col">
-    <div class="card_values">
+    <div class="card_values" @mouseleave="dropdown_menu = false">
       <div class="icon mb-2">
         <font-awesome-icon :icon="value.icon" />
       </div>
@@ -75,7 +75,7 @@ export default {
     top: -30%;
     left: 0;
     z-index: 1;
-    height: 373px;
+    height: 110%;
     overflow-y: auto;
     padding: 2rem;
     text-align: center;
@@ -100,29 +100,6 @@ export default {
         font-weight: 100;
       }
     }
-  }
-}
-
-@keyframes entry {
-  0% {
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-  }
-  40% {
-    top: -70%;
-    left: 0;
-    opacity: 0.6;
-  }
-  80% {
-    top: -20%;
-    left: 0;
-    opacity: 0.9;
-  }
-  100% {
-    top: -30%;
-    left: 0;
-    opacity: 1;
   }
 }
 

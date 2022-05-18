@@ -102,29 +102,6 @@ export default {
   }
 }
 
-@keyframes flip {
-  0% {
-    transform: perspective(600px) rotateY(0);
-    animation-timing-function: ease-out;
-  }
-  40% {
-    transform: perspective(600px) translateZ(150px) rotateY(170deg);
-    animation-timing-function: ease-out;
-  }
-  50% {
-    transform: perspective(600px) translateZ(150px) rotateY(190deg) scale(1);
-    animation-timing-function: ease-in;
-  }
-  80% {
-    transform: perspective(600px) rotateY(360deg) scale(0.95);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: perspective(600px) scale(1);
-    animation-timing-function: ease-in;
-  }
-}
-
 @media screen and (min-width: 2000px) {
   .mission_text {
     padding-top: 10rem;

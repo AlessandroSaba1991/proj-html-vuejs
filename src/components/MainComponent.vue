@@ -5,7 +5,8 @@
     <ValuesSection />
     <CausesSection />
     <JournalSection />
-    <DonateSection />
+    <DonateSection @changeShowForm="changeShowForm"/>
+    <DonateForm v-if="showForm" @changeShowForm="changeShowForm" />
   </main>
 </template>
 
@@ -16,6 +17,7 @@ import ValuesSection from "./ValuesSectionComponent.vue";
 import CausesSection from "./CausesSectionComponent.vue";
 import JournalSection from "./JournalSectionComponent.vue";
 import DonateSection from "./DonateSectionComponent.vue";
+import DonateForm from './DonateFormComponent.vue'
 
 export default {
   name: "MainComponent",
@@ -26,7 +28,23 @@ export default {
     CausesSection,
     JournalSection,
     DonateSection,
+    DonateForm
   },
+  data(){
+    return{
+      showForm:false
+    }
+  },
+  methods:{
+    changeShowForm(){
+      if(this.showForm===true){
+        this.showForm=false
+      } else {
+
+        this.showForm=true
+      }
+    }
+  }
 };
 </script>
 

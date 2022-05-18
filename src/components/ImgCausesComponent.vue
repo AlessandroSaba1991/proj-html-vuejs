@@ -40,7 +40,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width: 900px;
+  width: 38%;
   border-radius: 0.25rem;
   box-shadow: 0 0 10px $secondary-color;
   color: red;
@@ -56,14 +56,6 @@ export default {
       top: 1%;
       right: 1%;
     }
-  }
-}
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 </style>
