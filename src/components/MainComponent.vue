@@ -5,8 +5,8 @@
     <ValuesSection />
     <CausesSection />
     <JournalSection />
-    <DonateSection @changeShowForm="changeShowForm"/>
-    <DonateForm v-if="showForm" @changeShowForm="changeShowForm" />
+    <DonateSection @changeShowForm="openShowForm" />
+    <DonateForm v-if="showForm" @changeShowForm="closeShowForm" />
   </main>
 </template>
 
@@ -17,7 +17,7 @@ import ValuesSection from "./ValuesSectionComponent.vue";
 import CausesSection from "./CausesSectionComponent.vue";
 import JournalSection from "./JournalSectionComponent.vue";
 import DonateSection from "./DonateSectionComponent.vue";
-import DonateForm from './DonateFormComponent.vue'
+import DonateForm from "./DonateFormComponent.vue";
 
 export default {
   name: "MainComponent",
@@ -28,23 +28,29 @@ export default {
     CausesSection,
     JournalSection,
     DonateSection,
-    DonateForm
+    DonateForm,
   },
-  data(){
-    return{
-      showForm:false
-    }
+  data() {
+    return {
+      showForm: false,
+    };
   },
-  methods:{
-    changeShowForm(){
-      if(this.showForm===true){
-        this.showForm=false
-      } else {
-
-        this.showForm=true
-      }
-    }
-  }
+  methods: {
+    openShowForm() {
+      this.showForm = true;
+      setTimeout(
+        () => document.getElementById("app").scrollIntoView(false),
+        1000
+      );
+    },
+    closeShowForm() {
+      document.getElementById("6").classList.add("slider_close");
+      setTimeout(() => {
+        this.showForm = false;
+        document.getElementById("6").classList.remove("slider_close");
+      }, 1000);
+    },
+  },
 };
 </script>
 

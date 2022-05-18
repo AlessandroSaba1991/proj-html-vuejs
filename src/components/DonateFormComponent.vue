@@ -18,7 +18,13 @@
       <input type="text" name="surname" id="surname" />
       <label for="email">Email Address</label>
       <input type="text" name="email" id="email" />
-      <button class="btn_me btn_empty_primary" type="submit" @click="$emit('changeShowForm')">Send</button>
+      <button
+        class="btn_me btn_empty_primary"
+        type="submit"
+        @click="$emit('changeShowForm')"
+      >
+        Send
+      </button>
     </form>
   </section>
 </template>
@@ -31,13 +37,17 @@ export default {
 
 <style lang="scss" scoped>
 .form_me {
-    position: relative;
+  position: relative;
   padding: 10rem 0;
   text-align: center;
   color: $text-dark;
   height: 920px;
   transition: all 1s;
   animation: slider 1s linear;
+    overflow: hidden;
+  &.slider_close {
+    animation: sliderOut 1s;
+  }
   .title_me {
     display: flex;
     flex-direction: column;
@@ -52,15 +62,14 @@ export default {
     }
   }
   form {
-      
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     row-gap: 1rem;
     .icon_mark {
-        font-size: 25px;
-        color: red;
+      font-size: 25px;
+      color: red;
       position: absolute;
       top: 1%;
       right: 1%;

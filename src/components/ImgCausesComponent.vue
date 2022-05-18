@@ -11,7 +11,16 @@
         <div class="icon_mark" @click="dropdown_image = false">
           <font-awesome-icon
             icon="fa-solid fa-xmark"
-            @click="dropdown_menu = false"/>
+            @click="dropdown_menu = false"
+          />
+        </div>
+        <div class="text_dropdown">
+          <h4>Lorem</h4>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
+            saepe totam veniam amet numquam dolores! Provident non id quia?
+            Ullam?
+          </p>
         </div>
         <img :src="imgCauses.original" :alt="imgCauses.text" />
       </div>
@@ -55,6 +64,13 @@ export default {
       position: absolute;
       top: 1%;
       right: 1%;
+    }
+    .text_dropdown {
+      padding: 1rem;
+      color: $text-light;
+      background-color: #ed686480;
+      position: absolute;
+      bottom: 0;
     }
   }
 }
