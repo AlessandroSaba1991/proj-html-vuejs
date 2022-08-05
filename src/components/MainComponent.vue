@@ -6,7 +6,11 @@
     <CausesSection />
     <JournalSection />
     <DonateSection @changeShowForm="openShowForm" />
-    <DonateForm v-if="showForm" @changeShowForm="closeShowForm" />
+    <DonateForm
+      v-if="showForm"
+      @changeShowForm="ValidShowForm"
+      @closeShowForm="closeShowForm"
+    />
   </main>
 </template>
 
@@ -38,10 +42,19 @@ export default {
   methods: {
     openShowForm() {
       this.showForm = true;
-      setTimeout(
-        () => document.getElementById("app").scrollIntoView(false),
-        1000
-      );
+      setTimeout(() => {
+        const h6 = document.getElementById("6").clientHeight - 160;
+        window.scrollBy(0, h6);
+      }, 1000);
+    },
+    ValidShowForm() {
+      setTimeout(() => {
+        document.getElementById("6").classList.add("slider_close");
+        setTimeout(() => {
+          this.showForm = false;
+          document.getElementById("6").classList.remove("slider_close");
+        }, 1000);
+      }, 2000);
     },
     closeShowForm() {
       document.getElementById("6").classList.add("slider_close");

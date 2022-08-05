@@ -27,9 +27,6 @@
             explicabo nemo optio dignissimos dicta impedit omnis ducimus
             voluptas suscipit aliquam eius fugit, minima quis blanditiis
             perferendis a nulla. Magnam consequatur facere distinctio nesciunt!
-            Ducimus pariatur veniam qui dolorum soluta magnam quisquam odio
-            cumque temporibus nulla expedita magni est dignissimos odit commodi
-            id quos, modi perferendis minus. Nisi sed tempora suscipit
           </p>
         </div>
       </div>

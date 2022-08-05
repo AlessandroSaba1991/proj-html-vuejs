@@ -2,9 +2,9 @@
   <div id="app">
     <div class="splash" v-if="!loading"></div>
     <div class="wrapper" v-if="loading">
-    <Header />
-    <Main />
-    <Footer />
+      <Header />
+      <Main />
+      <Footer />
     </div>
   </div>
 </template>
@@ -21,19 +21,21 @@ export default {
     Main,
     Footer,
   },
-  data(){
-    return{
-      loading:false
-    }
+  data() {
+    return {
+      loading: false,      
+    };
   },
-  methods:{
-    splash(){
-      setTimeout(()=> this.loading = true,3500)
-    }
+  methods: {
+    splash() {
+      setTimeout(() => {
+        this.loading = true;
+      }, 3500);
+    },
   },
-  mounted(){
-    this.splash()
-  }
+  mounted() {
+    this.splash();
+  },
 };
 </script>
 

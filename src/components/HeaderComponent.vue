@@ -1,5 +1,5 @@
 <template>
-  <header :class="bgNav()">
+  <header class="my_header" :class="bgNav()">
     <div class="container">
       <LogoHeader />
       <Nav />
@@ -20,28 +20,55 @@ export default {
   data() {
     return {
       scrollPosition: null,
+      h1: "",
+      h2: "",
+      h_values: "",
+      h3: "",
+      h4: "",
+      h5: "",
+      h_header: "",
     };
   },
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
+      this.take_values();      
     },
     bgNav() {
-      let class_bg
-      if (this.scrollPosition > 5770) {
-        class_bg ='bg_primary'
-      } else if (this.scrollPosition > 3080) {
-        class_bg ='bg_secondary'
-      } else if (this.scrollPosition > 2060) {
-        class_bg ='bg_primary'
-      } else if (this.scrollPosition >  1220) {
-        class_bg ='bg_secondary'
+      const first_step = this.h1 - this.h_header;
+      const second_step = first_step + this.h2;
+      const third_step = second_step + this.h_values;
+      const fourth_step = third_step + this.h3 + this.h4;
+      const fifth_step = fourth_step + this.h5;
+      let class_bg;
+      if (this.scrollPosition > fifth_step) {
+        class_bg = "bg_secondary";
+      } else if (this.scrollPosition > fourth_step) {
+        class_bg = "bg_primary";
+      } else if (this.scrollPosition > third_step) {
+        class_bg = "bg_secondary";
+      } else if (this.scrollPosition > second_step) {
+        class_bg = "bg_primary";
+      } else if (this.scrollPosition > first_step) {
+        class_bg = "bg_secondary";
       }
-      return class_bg
+      return class_bg;
+    },
+    take_values() {
+      this.h1 = document.getElementById("1").clientHeight;
+      this.h2 = document.getElementById("2").clientHeight;
+      this.h_values = document.querySelector(".values").clientHeight;
+      this.h3 = document.getElementById("3").clientHeight;
+      this.h4 = document.getElementById("4").clientHeight;
+      this.h5 = document.getElementById("5").clientHeight;
+      this.h_header = document.querySelector(".my_header").clientHeight / 2;
     },
   },
   mounted() {
     window.addEventListener("scroll", this.updateScroll);
+    setTimeout(() => {
+      this.take_values();
+    }, 200);
   },
 };
 </script>

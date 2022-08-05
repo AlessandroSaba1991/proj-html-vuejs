@@ -8,11 +8,36 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <div class="card_article">
+          <div class="card_article" @click="journal_full = true">
             <img :src="img_active.img" :alt="img_active.title" />
             <div class="text_article">
               <h6>{{ img_active.title }}</h6>
               <p>{{ img_active.text }}</p>
+            </div>
+          </div>
+          <div class="dropdown_journal" v-if="journal_full">
+            <div class="icon_mark">
+              <font-awesome-icon
+                icon="fa-solid fa-xmark"
+                @click="journal_full = false"
+              />
+            </div>
+            <div class="container-fluid px-0">
+              <div class="row row-cols-2 gx-0">
+                <div class="col">
+                  <img
+                    class="img-fluid"
+                    :src="img_active.img"
+                    :alt="img_active.title"
+                  />
+                </div>
+                <div class="col">
+                  <div class="text_article">
+                    <h6>{{ img_active.title }}</h6>
+                    <p>{{ img_active.text }}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -29,7 +54,10 @@
         </div>
       </div>
       <div class="button">
-        <a class="btn_me btn_full_secondary text-uppercase d-inline-block w-100" href="#4">
+        <a
+          class="btn_me btn_full_secondary text-uppercase d-inline-block w-100"
+          href="#4"
+        >
           view all our articles
         </a>
       </div>
@@ -79,6 +107,7 @@ export default {
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Prasent ac nibh vestibulum, laoreet ipsum.",
         },
       ],
+      journal_full: false,
     };
   },
   methods: {
@@ -93,6 +122,7 @@ export default {
 
 <style lang="scss" scoped>
 .journal {
+  position: relative;
   padding-top: 5rem;
   padding-bottom: 4rem;
   background-color: $bg_light;
@@ -114,8 +144,24 @@ export default {
         margin-bottom: 4rem;
       }
     }
-    .card_article {
-      border: 1px solid #ebeaea;
+    .icon_mark {
+      font-size: 25px;
+      color: red;
+      position: absolute;
+      top: 1%;
+      right: 1%;
+      z-index: 2;
+    }
+    .dropdown_journal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      width: 80%;
+      background-color: black;
+       animation: appear 1s;
       .text_article {
         padding: 1rem;
         h6 {
@@ -123,6 +169,25 @@ export default {
           letter-spacing: 0.3px;
           color: $primary-color;
           margin-top: 0.5rem;
+        }
+        p {
+          font-size: 18px;
+          line-height: 38px;
+          letter-spacing: 0;
+          color: white;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .card_article {
+      border: 1px solid #ebeaea;
+      .text_article {
+        padding: 1.75rem;
+        h6 {
+          font-size: 25px;
+          margin-top: 1.25rem;
+          letter-spacing: 0.3px;
+          color: $primary-color;
         }
         p {
           font-size: 11px;
